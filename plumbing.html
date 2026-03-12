@@ -2,188 +2,226 @@
 <html lang="en">
 <head>
     <title>Shrine Plumbing - Shrine Enterprises</title>
-    <link rel="stylesheet" href="https://taniac1208.github.io/ShrineEnt/style.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Service page specific styles */
-        .service-hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #0e2c4d, #1a4a7a);
-            color: white;
+        /* Same styles as sone.html */
+        .service-page {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
         
-        .service-hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            color: white;
+        .service-header {
+            background: white;
+            padding: 15px 40px;
+            border-bottom: 3px solid #f2b233;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
-        .service-hero .subtitle {
-            font-size: 24px;
+        .service-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-nav .logo img {
+            height: 90px;
+            width: auto;
+            display: block;
+        }
+        
+        .service-nav a {
+            margin-left: 35px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        
+        .service-nav a:hover {
             color: #f2b233;
-            margin-bottom: 15px;
+        }
+        
+        .service-hero-light {
+            background: #f8fafc;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eef2f6;
+        }
+        
+        .service-hero-light h1 {
+            color: #0e2c4d;
+            font-size: 52px;
+            margin-bottom: 10px;
             font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .service-hero-light .subtitle {
+            color: #f2b233;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .service-hero-light p {
+            color: #4a5568;
+            font-size: 20px;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-weight: 300;
+            line-height: 1.6;
         }
         
         .service-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
         
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border: 1px solid #eee;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(242, 178, 51, 0.2);
-        }
-        
-        .service-card h3 {
+        .service-content h2 {
             color: #0e2c4d;
-            font-size: 24px;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #f2b233;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        .service-card p {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-        
-        .service-card .highlight {
-            color: #f2b233;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .about-section {
-            background: #f8f9fa;
-            padding: 60px 20px;
-        }
-        
-        .about-section .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .about-section h2 {
-            color: #0e2c4d;
-            font-size: 42px;
-            margin-bottom: 30px;
+            font-size: 38px;
+            margin-bottom: 25px;
+            font-weight: 500;
             position: relative;
+            padding-bottom: 12px;
         }
         
-        .about-section h2:after {
+        .service-content h2:after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: 0;
             left: 0;
-            width: 80px;
+            width: 70px;
             height: 3px;
             background: #f2b233;
         }
         
-        .about-section p {
+        .service-content p {
+            color: #4a5568;
             font-size: 18px;
             line-height: 1.8;
-            color: #555;
+            margin-bottom: 30px;
+            font-weight: 400;
         }
         
-        .cta-section {
-            background: #0e2c4d;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
+        .offerings-list {
+            list-style: none;
+            padding: 0;
+            margin: 40px 0;
         }
         
-        .cta-section h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
+        .offerings-list li {
+            padding: 15px 0 15px 25px;
+            border-bottom: 1px solid #eef2f6;
+            color: #2d3748;
+            font-size: 18px;
+            position: relative;
         }
         
-        .cta-buttons {
+        .offerings-list li:before {
+            content: "•";
+            color: #f2b233;
+            font-weight: bold;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        
+        .service-buttons {
             display: flex;
             gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
+            margin: 50px 0;
             flex-wrap: wrap;
         }
         
-        .cta-btn {
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: all 0.3s;
-        }
-        
-        .cta-btn.primary {
-            background: #f2b233;
-            color: #0e2c4d;
-        }
-        
-        .cta-btn.primary:hover {
-            background: #ffc44d;
-            transform: translateY(-3px);
-        }
-        
-        .cta-btn.secondary {
-            background: transparent;
+        .btn-primary {
+            padding: 14px 40px;
+            background: #0e2c4d;
             color: white;
-            border: 2px solid #f2b233;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            display: inline-block;
         }
         
-        .cta-btn.secondary:hover {
+        .btn-primary:hover {
             background: #f2b233;
             color: #0e2c4d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(242, 178, 51, 0.3);
         }
         
-        .service-logo {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #f2b233, #ffc44d);
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .btn-secondary {
+            padding: 14px 40px;
+            background: transparent;
             color: #0e2c4d;
-            font-size: 48px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            border: 2px solid #0e2c4d;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #0e2c4d;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: #081a30;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-weight: 300;
         }
         
         @media (max-width: 768px) {
-            .service-hero h1 { font-size: 42px; }
-            .service-grid { grid-template-columns: 1fr; }
-            .cta-section h2 { font-size: 36px; }
+            .service-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .service-nav a {
+                margin: 0 12px;
+            }
+            
+            .service-hero-light h1 {
+                font-size: 38px;
+            }
+            
+            .service-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="service-logo" style="background: linear-gradient(135deg, #f2b233, #ffc44d); font-size: 24px; font-weight: bold;">
-    SHRINE<br>PLUMBING
-</div>
+<body class="service-page">
+    <div class="service-header">
+        <div class="service-nav">
+            <div class="logo">
+                <img src="shrine.jpeg" alt="SHRINE ENTERPRISES">
+            </div>
             <nav>
                 <a href="index.html">HOME</a>
                 <a href="index.html#services">SERVICES</a>
@@ -191,93 +229,37 @@
                 <a href="index.html#contact">CONTACT</a>
             </nav>
         </div>
-    </header>
+    </div>
 
-    <section class="service-hero">
-        <div class="service-logo">🔧</div>
+    <div class="service-hero-light">
         <h1>SHRINE PLUMBING</h1>
         <div class="subtitle">PROFESSIONAL PLUMBING SERVICES</div>
-        <p style="font-size: 20px; margin-top: 20px;">Reliable, efficient, and professional plumbing for residential and commercial properties</p>
-    </section>
+        <p>Reliable, efficient, and professional plumbing for residential and commercial properties</p>
+    </div>
 
-    <section class="about-section">
-        <div class="container">
-            <h2>About Shrine Plumbing</h2>
-            <p>Shrine Plumbing is the trusted plumbing division of <strong>SHRINE ENTERPRISES</strong>, providing top-quality plumbing solutions across South Africa. With years of experience in the industry, we've built a reputation for reliability, professionalism, and exceptional workmanship.</p>
-            <p>From emergency repairs to full installations, our team is equipped to handle projects of any size. We pride ourselves on arriving on time, providing fair pricing, and leaving your property cleaner than we found it.</p>
-        </div>
-    </section>
-
-    <section class="service-content">
-        <h2 style="text-align: center; color: #0e2c4d; font-size: 42px; margin-bottom: 20px;">Our Plumbing Services</h2>
-        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">Comprehensive solutions for all your plumbing needs</p>
+    <div class="service-content">
+        <h2>About Shrine Plumbing</h2>
+        <p>Shrine Plumbing is the trusted plumbing division of <strong>SHRINE ENTERPRISES</strong>, providing top-quality plumbing solutions across South Africa. With years of experience in the industry, we've built a reputation for reliability, professionalism, and exceptional workmanship.</p>
+        <p>From emergency repairs to full installations, our team is equipped to handle projects of any size. We pride ourselves on arriving on time, providing fair pricing, and leaving your property cleaner than we found it.</p>
         
-        <div class="service-grid">
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">💧</div>
-                <h3>Leak Repairs</h3>
-                <p>Fast and reliable leak detection and repairs for all types of plumbing systems. We find the source and fix it right the first time.</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">🔧</div>
-                <h3>Pipe Installations</h3>
-                <p>Professional installation of new piping systems for residential and commercial properties using high-quality materials.</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">🚨</div>
-                <h3>Emergency Plumbing</h3>
-                <p>24/7 emergency services for those unexpected plumbing disasters. We're here when you need us most.</p>
-                <p class="highlight">Available 24/7</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">🚿</div>
-                <h3>Bathroom Renovations</h3>
-                <p>Complete bathroom plumbing renovations, from fixture installation to full system upgrades.</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">🔨</div>
-                <h3>Routine Maintenance</h3>
-                <p>Regular plumbing inspections and maintenance to prevent problems before they start.</p>
-                <p class="highlight">Save money with preventative care</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">🏢</div>
-                <h3>Commercial Plumbing</h3>
-                <p>Specialized plumbing services for businesses, restaurants, and commercial properties.</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">🚽</div>
-                <h3>Toilet Repairs & Installation</h3>
-                <p>Expert repairs and installation of all toilet types and models.</p>
-            </div>
-            
-            <div class="service-card">
-                <div style="font-size: 40px; margin-bottom: 15px;">💦</div>
-                <h3>Water Heater Services</h3>
-                <p>Installation, repair, and maintenance of geysers and water heating systems.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>Need a Plumber?</h2>
-        <p style="font-size: 20px; max-width: 600px; margin: 0 auto;">Don't let plumbing problems wait. Contact us today for a free quote or emergency service.</p>
+        <h2>Our Plumbing Services</h2>
+        <ul class="offerings-list">
+            <li><strong>Leak Repairs</strong> – Fast and reliable leak detection and repairs for all types of plumbing systems. We find the source and fix it right the first time.</li>
+            <li><strong>Pipe Installations</strong> – Professional installation of new piping systems for residential and commercial properties using high-quality materials.</li>
+            <li><strong>Emergency Plumbing</strong> – 24/7 emergency services for those unexpected plumbing disasters. We're here when you need us most.</li>
+            <li><strong>Bathroom Renovations</strong> – Complete bathroom plumbing renovations, from fixture installation to full system upgrades.</li>
+            <li><strong>Routine Maintenance</strong> – Regular plumbing inspections and maintenance to prevent problems before they start. Save money with preventative care.</li>
+            <li><strong>Commercial Plumbing</strong> – Specialized plumbing services for businesses, restaurants, and commercial properties.</li>
+        </ul>
         
-        <div class="cta-buttons">
-            <a href="index.html#contact" class="cta-btn primary">Get a Quote</a>
-            <a href="index.html" class="cta-btn secondary">Back to Home</a>
+        <div class="service-buttons">
+            <a href="index.html#contact" class="btn-primary">Get a Quote</a>
+            <a href="index.html" class="btn-secondary">Back to Home</a>
         </div>
-    </section>
+    </div>
 
     <footer>
         <p>© 2026 Shrine Enterprises. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
