@@ -1,50 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Chune With Sone</title>
-<link rel="stylesheet" href="style.css">
+    <title>Chune With Sone - Shrine Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Additional styles specific to service pages */
+        .service-hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0e2c4d 0%, #1a3f66 100%);
+        }
+        
+        .service-hero h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .service-hero .subtitle {
+            font-size: 24px;
+            color: #f2b233;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .service-hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .service-about {
+            background: white;
+            color: #333;
+            padding: 80px 20px;
+        }
+        
+        .service-about .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .service-about h2 {
+            color: #0e2c4d;
+            font-size: 42px;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .service-about h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: #f2b233;
+        }
+        
+        .service-about p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .service-offerings {
+            background: #f8f9fa;
+            padding: 80px 20px;
+        }
+        
+        .service-offerings h2 {
+            text-align: center;
+            color: #0e2c4d;
+            font-size: 42px;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .service-offerings h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #f2b233;
+        }
+        
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .offering-item {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        
+        .offering-item h3 {
+            color: #0e2c4d;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .offering-item p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .offering-item .highlight {
+            color: #f2b233;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        
+        .service-cta {
+            background: #0e2c4d;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .service-cta h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .service-cta p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn.primary {
+            background: #f2b233;
+            color: #0e2c4d;
+        }
+        
+        .cta-btn.primary:hover {
+            background: #ffc44d;
+            transform: translateY(-3px);
+        }
+        
+        .cta-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #f2b233;
+        }
+        
+        .cta-btn.secondary:hover {
+            background: #f2b233;
+            color: #0e2c4d;
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 42px;
+            }
+            
+            .service-hero .subtitle {
+                font-size: 20px;
+            }
+            
+            .offerings-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-cta h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">SHRINE ENTERPRISES</div>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="index.html#services">SERVICES</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-<a href="index.html">← Back to Home</a>
-</header>
+    <section class="service-hero">
+        <h1>CHUNE WITH SONE</h1>
+        <div class="subtitle">MC & ENTERTAINMENT SERVICES</div>
+        <p>with Sonehri</p>
+        <p style="margin-top: 30px;">Bringing the energy, vibes, and unforgettable moments to your events</p>
+    </section>
 
-<section class="hero">
-<h1>Chune With Sone</h1>
-<p>MC & Entertainment Services</p>
-</section>
+    <section class="service-about">
+        <div class="container">
+            <h2>About Chune With Sone</h2>
+            <p>Chune With Sone is the entertainment arm of <strong>SHRINE ENTERPRISES</strong>, led by the dynamic and charismatic Sonehri. With years of experience hosting events across South Africa, Sonehri has built a reputation for electrifying crowds and creating memories that last a lifetime.</p>
+            <p>Whether it's a wedding, corporate function, birthday party, or cultural celebration, Chune With Sone brings the perfect blend of professionalism, personality, and pure entertainment. We don't just MC events — we create experiences.</p>
+        </div>
+    </section>
 
-<section class="services">
+    <section class="service-offerings">
+        <h2>What We Offer</h2>
+        
+        <div class="offerings-grid">
+            <div class="offering-item">
+                <h3>Professional MC Services</h3>
+                <p>Sonehri brings unmatched energy and professionalism to every event, keeping your guests engaged and entertained from start to finish.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Weddings & Engagements</h3>
+                <p>Make your special day truly unforgettable with a seasoned MC who knows how to read the room and keep the celebration flowing.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Corporate Events</h3>
+                <p>From product launches to year-end functions, Chune With Sone delivers polished and dynamic hosting for corporate gatherings.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Parties & Private Events</h3>
+                <p>Cultural celebrations — whatever the big day.</p>
+                <p class="highlight">Every event is unique. We tailor our services to match your vision, budget and vibe — no cookie-cutter packages here.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Event Planning Support</h3>
+                <p>Beyond MC duties, we help coordinate your event timeline to ensure everything runs smoothly on the big day.</p>
+            </div>
+        </div>
+    </section>
 
-<h2>What We Offer</h2>
+    <section class="service-cta">
+        <h2>Ready to Turn Up the Energy?</h2>
+        <p>Let's make your next event one to remember. Get in touch to discuss your event and get a personalised quote.</p>
+        
+        <div class="cta-buttons">
+            <a href="index.html#contact" class="cta-btn primary">Get a Quote</a>
+            <a href="index.html" class="cta-btn secondary">Back to Home</a>
+        </div>
+    </section>
 
-<div class="service-grid">
-
-<div class="card">
-<h3>Professional MC</h3>
-<p>Energetic hosting for weddings and large events.</p>
-</div>
-
-<div class="card">
-<h3>Corporate Events</h3>
-<p>Professional hosting for corporate functions and conferences.</p>
-</div>
-
-<div class="card">
-<h3>Private Parties</h3>
-<p>Birthday celebrations and cultural events.</p>
-</div>
-
-<div class="card">
-<h3>Event Planning Support</h3>
-<p>Helping coordinate timelines and program flow.</p>
-</div>
-
-</div>
-
-</section>
-
+    <footer>
+        <p>© 2026 Shrine Enterprises. All rights reserved.</p>
+    </footer>
 </body>
 </html>
