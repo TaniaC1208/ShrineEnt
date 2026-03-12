@@ -1,45 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Shrine IT Services</title>
-<link rel="stylesheet" href="style.css">
+    <title>Shrine IT Solutions - Shrine Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Copy the same styles from sone.html */
+        .service-hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0e2c4d 0%, #1a3f66 100%); }
+        .service-hero h1 { font-size: 56px; margin-bottom: 15px; letter-spacing: 2px; }
+        .service-hero .subtitle { font-size: 24px; color: #f2b233; margin-bottom: 15px; font-weight: 600; }
+        .service-hero p { font-size: 20px; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+        .service-about { background: white; color: #333; padding: 80px 20px; }
+        .service-about .container { max-width: 900px; margin: 0 auto; }
+        .service-about h2 { color: #0e2c4d; font-size: 42px; margin-bottom: 30px; position: relative; display: inline-block; }
+        .service-about h2:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 80px; height: 3px; background: #f2b233; }
+        .service-about p { font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #555; }
+        .service-offerings { background: #f8f9fa; padding: 80px 20px; }
+        .service-offerings h2 { text-align: center; color: #0e2c4d; font-size: 42px; margin-bottom: 50px; position: relative; display: inline-block; width: 100%; }
+        .service-offerings h2:after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: #f2b233; }
+        .offerings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .offering-item { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .offering-item h3 { color: #0e2c4d; font-size: 24px; margin-bottom: 15px; font-weight: 600; }
+        .offering-item p { color: #666; line-height: 1.7; font-size: 16px; }
+        .offering-item .highlight { color: #f2b233; font-weight: 600; margin-top: 15px; }
+        .service-cta { background: #0e2c4d; color: white; text-align: center; padding: 80px 20px; }
+        .service-cta h2 { font-size: 48px; margin-bottom: 20px; }
+        .service-cta p { font-size: 20px; max-width: 600px; margin: 0 auto 40px; opacity: 0.9; }
+        .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .cta-btn { padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: all 0.3s; }
+        .cta-btn.primary { background: #f2b233; color: #0e2c4d; }
+        .cta-btn.primary:hover { background: #ffc44d; transform: translateY(-3px); }
+        .cta-btn.secondary { background: transparent; color: white; border: 2px solid #f2b233; }
+        .cta-btn.secondary:hover { background: #f2b233; color: #0e2c4d; transform: translateY(-3px); }
+        @media (max-width: 768px) {
+            .service-hero h1 { font-size: 42px; }
+            .service-hero .subtitle { font-size: 20px; }
+            .offerings-grid { grid-template-columns: 1fr; }
+            .service-cta h2 { font-size: 36px; }
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">SHRINE ENTERPRISES</div>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="index.html#services">SERVICES</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-<a href="index.html">← Back to Home</a>
-</header>
+    <section class="service-hero">
+        <h1>SHRINE IT SOLUTIONS</h1>
+        <div class="subtitle">IT SERVICES & WEBSITE BUILDING</div>
+        <p>with Netania Chetty</p>
+        <p style="margin-top: 30px;">Modern IT solutions and stunning website design to take your business to the next level</p>
+    </section>
 
-<section class="hero">
-<h1>Shrine IT Services</h1>
-<p>IT Support & Website Development</p>
-</section>
+    <section class="service-about">
+        <div class="container">
+            <h2>About Shrine IT Solutions</h2>
+            <p>Shrine IT Solutions is the technology division of <strong>SHRINE ENTERPRISES</strong>, led by Netania Chetty. We specialize in creating digital experiences that help businesses grow and thrive in the modern online landscape.</p>
+            <p>From concept to launch, we work closely with our clients to understand their vision and deliver solutions that exceed expectations. Whether you need a simple website or a complete digital transformation, we have the expertise to bring your ideas to life.</p>
+        </div>
+    </section>
 
-<section class="services">
+    <section class="service-offerings">
+        <h2>What We Offer</h2>
+        
+        <div class="offerings-grid">
+            <div class="offering-item">
+                <h3>Website Development</h3>
+                <p>Custom, responsive websites designed to showcase your brand and convert visitors into customers.</p>
+                <p class="highlight">Mobile-first, modern designs</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>IT Support</h3>
+                <p>Reliable technical support and troubleshooting to keep your business running smoothly.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>E-Commerce Solutions</h3>
+                <p>Full-featured online stores that make it easy to sell your products and services 24/7.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Digital Strategy</h3>
+                <p>Strategic guidance to help you leverage technology for business growth and efficiency.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Website Maintenance</h3>
+                <p>Ongoing support and updates to keep your site secure, fast, and up-to-date.</p>
+            </div>
+            
+            <div class="offering-item">
+                <h3>Business Software Solutions</h3>
+                <p>Custom software solutions to streamline your operations and improve productivity.</p>
+            </div>
+        </div>
+    </section>
 
-<h2>Services</h2>
+    <section class="service-cta">
+        <h2>Ready to Go Digital?</h2>
+        <p>Let's build something amazing together. Get in touch to discuss your project.</p>
+        
+        <div class="cta-buttons">
+            <a href="index.html#contact" class="cta-btn primary">Start Your Project</a>
+            <a href="index.html" class="cta-btn secondary">Back to Home</a>
+        </div>
+    </section>
 
-<div class="service-grid">
-
-<div class="card">
-<h3>Website Development</h3>
-<p>Modern responsive websites for businesses.</p>
-</div>
-
-<div class="card">
-<h3>IT Support</h3>
-<p>Technical support and troubleshooting.</p>
-</div>
-
-<div class="card">
-<h3>Digital Solutions</h3>
-<p>Helping businesses grow with technology.</p>
-</div>
-
-</div>
-
-</section>
-
+    <footer>
+        <p>© 2026 Shrine Enterprises. All rights reserved.</p>
+    </footer>
 </body>
 </html>
