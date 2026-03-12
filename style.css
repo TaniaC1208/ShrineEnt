@@ -14,7 +14,7 @@ body {
 /* Header & Navigation */
 header {
     background: white;
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-bottom: 3px solid #f2b233;
 }
 
@@ -26,11 +26,16 @@ header {
     margin: 0 auto;
 }
 
-.logo {
-    color: #0e2c4d;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
+/* Make header logo bigger and transparent */
+.navbar .logo {
+    background: transparent;
+    padding: 5px 0;
+}
+
+.navbar .logo img {
+    height: 70px; /* Bigger logo */
+    width: auto;
+    display: block;
 }
 
 nav a {
@@ -149,62 +154,102 @@ nav a:hover {
     color: #666;
 }
 
+/* Service cards styling to match screenshot */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .card {
-    background: #f8f9fa;
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+    border-radius: 12px;
+    padding: 30px 25px;
     text-align: left;
-    border: 1px solid #eee;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eaeef2;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(14, 44, 77, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(242, 178, 51, 0.15);
+}
+
+.card-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .card h3 {
     color: #0e2c4d;
     font-size: 24px;
     margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .card .subtitle {
     color: #f2b233;
-    font-weight: bold;
-    margin-bottom: 15px;
     font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card .with-name {
+    color: #0e2c4d;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-style: italic;
 }
 
 .card p {
-    color: #555;
-    margin-bottom: 20px;
+    color: #4a5568;
+    font-size: 15px;
     line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-.card a {
+.card .learn-more {
     display: inline-block;
     padding: 10px 25px;
     background: #0e2c4d;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 600;
-    transition: background 0.3s;
+    font-size: 14px;
+    align-self: flex-start;
+    transition: all 0.3s;
+    border: 2px solid transparent;
 }
 
-.card a:hover {
+.card .learn-more:hover {
     background: #f2b233;
     color: #0e2c4d;
+    border-color: #0e2c4d;
 }
 
 /* Contact Section */
@@ -349,9 +394,14 @@ footer {
     
     .service-grid {
         grid-template-columns: 1fr;
+        padding: 0 15px;
     }
     
     .form-row {
         grid-template-columns: 1fr;
+    }
+    
+    .navbar .logo img {
+        height: 50px;
     }
 }
