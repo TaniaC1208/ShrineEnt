@@ -60,7 +60,7 @@
             color: #f2b233;
         }
 
-        /* Hero Section */
+        /* Hero Section - Beautiful gradient */
         .hero-gradient {
             text-align: center;
             padding: 100px 20px;
@@ -136,6 +136,18 @@
             color: #1e293b;
             font-family: 'Playfair Display', serif;
             text-align: center;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #f2b233;
         }
 
         .section-subtitle {
@@ -206,6 +218,19 @@
             color: #64748b;
             font-size: 15px;
             line-height: 1.7;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #f1f5f9;
+            border-left: 4px solid #f2b233;
+            font-style: italic;
+            color: #334155;
+            font-size: 18px;
+            border-radius: 0 12px 12px 0;
         }
 
         /* CTA Section */
@@ -345,7 +370,7 @@
         <h1>SHRINE IT SOLUTIONS</h1>
         <div class="subtitle">IT SERVICES & WEBSITE BUILDING</div>
         <div class="with-name">with Netania Chetty</div>
-        <p>Modern IT solutions and stunning website design to take your business to the next level</p>
+        <p>Modern IT solutions and stunning website design to take your business to the next level. From concept to launch, we build your digital presence.</p>
     </section>
 
     <!-- About Section -->
@@ -359,7 +384,7 @@
 
     <!-- Services Section -->
     <div class="container">
-        <h2 class="section-title">Our IT Solutions</h2>
+        <h2 class="section-title">What We Offer</h2>
         <p class="section-subtitle">Comprehensive technology services for modern businesses</p>
 
         <div class="cards-grid">
@@ -399,12 +424,16 @@
                 <p>Custom software solutions to streamline your operations and improve productivity.</p>
             </div>
         </div>
+
+        <div class="quote-box">
+            Every business is unique. We tailor our IT solutions to match your specific needs, goals, and budget.
+        </div>
     </div>
 
     <!-- CTA Section -->
     <section class="cta-section">
         <h2 class="cta-title">Ready to Go Digital?</h2>
-        <p class="cta-text">Let's build something amazing together. Get in touch to discuss your project.</p>
+        <p class="cta-text">Let's build something amazing together. Get in touch to discuss your project and get a personalised quote.</p>
         
         <div class="cta-buttons">
             <a href="index.html#contact" class="btn-primary">Start Your Project</a>
