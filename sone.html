@@ -37,7 +37,7 @@
         }
 
         .logo img {
-            height: 70px;
+            height: 80px;
             width: auto;
             display: block;
         }
@@ -60,21 +60,12 @@
             color: #f2b233;
         }
 
-        /* Hero Section - Gradient from React component */
+        /* Hero Section - Beautiful gradient */
         .hero-gradient {
-            position: relative;
-            padding: 120px 20px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #2d1b4a 0%, #b45309 100%);
-            color: white;
             text-align: center;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #0e2c4d 0%, #1a4a7a 100%);
+            color: white;
         }
 
         .hero-logo {
@@ -84,7 +75,6 @@
             background: rgba(255,255,255,0.1);
             border-radius: 16px;
             padding: 12px;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -106,7 +96,7 @@
 
         .hero-gradient .subtitle {
             font-size: 24px;
-            color: #fbbf24;
+            color: #f2b233;
             margin-bottom: 10px;
             font-weight: 500;
             text-transform: uppercase;
@@ -117,7 +107,6 @@
             font-size: 20px;
             font-style: italic;
             margin-bottom: 20px;
-            opacity: 0.9;
         }
 
         .hero-gradient p {
@@ -126,7 +115,6 @@
             margin: 20px auto 0;
             font-weight: 300;
             line-height: 1.6;
-            opacity: 0.9;
         }
 
         /* Main Content */
@@ -166,7 +154,7 @@
             margin-bottom: 20px;
         }
 
-        /* Cards Grid - Exactly like React component */
+        /* Cards Grid */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -267,7 +255,6 @@
             font-weight: 600;
             font-size: 16px;
             transition: all 0.3s;
-            border: 2px solid transparent;
         }
 
         .btn-primary:hover {
@@ -303,7 +290,6 @@
             color: white;
             text-align: center;
             padding: 30px;
-            font-size: 14px;
         }
 
         /* Responsive */
@@ -340,7 +326,6 @@
             }
         }
 
-        /* Font imports */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
     </style>
 </head>
@@ -349,7 +334,7 @@
     <header class="header">
         <div class="nav-container">
             <div class="logo">
-                <img src="shrine.jpeg" alt="SHRINE ENTERPRISES" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:24px;font-weight:bold;color:#0e2c4d;\'>SHRINE</span>'">
+                <img src="https://taniac1208.github.io/ShrineEnt/shrine.jpeg" alt="SHRINE ENTERPRISES">
             </div>
             <nav class="nav-links">
                 <a href="index.html">HOME</a>
@@ -360,17 +345,15 @@
         </div>
     </header>
 
-    <!-- Hero Section with Gradient -->
+    <!-- Hero Section -->
     <section class="hero-gradient">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="sone.jpeg" alt="Chune With Sone" onerror="this.innerHTML='🎤'; this.style.fontSize='48px'">
-            </div>
-            <h1>CHUNE WITH SONE</h1>
-            <div class="subtitle">MC & ENTERTAINMENT SERVICES</div>
-            <div class="with-name">with Sonehri</div>
-            <p>Bringing the energy, vibes, and unforgettable moments to your events</p>
+        <div class="hero-logo">
+            <img src="https://taniac1208.github.io/ShrineEnt/sone.jpeg" alt="Chune With Sone">
         </div>
+        <h1>CHUNE WITH SONE</h1>
+        <div class="subtitle">MC & ENTERTAINMENT SERVICES</div>
+        <div class="with-name">with Sonehri</div>
+        <p>Bringing the energy, vibes, and unforgettable moments to your events</p>
     </section>
 
     <!-- About Section -->
@@ -441,7 +424,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>© 2026 Shrine Enterprises. All rights reserved.</p>
     </footer>
